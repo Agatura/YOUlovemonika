@@ -71,14 +71,18 @@ addEventListener('scroll', () => {
   if (dread > .97 && document.body.classList.contains('invaded')) secret('bottom', 'ты дочитал до самого низа');
 }, { passive: true });
 
-/* ---------- глаза Моники ---------- */
-function look(x, y) { $$('.watcher .eye').forEach(e => { const r = e.getBoundingClientRect(), a = Math.atan2(y - r.top - r.height / 2, x - r.left - r.width / 2), d = Math.min(7, Math.hypot(x - r.left - r.width / 2, y - r.top - r.height / 2) / 30);
-  e.style.setProperty('--ex', Math.cos(a) * d + 'px'); e.style.setProperty('--ey', Math.sin(a) * d * .6 + 'px');
-  $('.watcher').style.setProperty('--ex', Math.cos(a) * d + 'px'); $('.watcher').style.setProperty('--ey', Math.sin(a) * d * .6 + 'px') }) }
+/* ---------- глаза Моники: зрачки двигаются за курсором ---------- */
+const eyesBox = $('#eyes'), pups = [$('#pL'), $('#pR')], CEN = [[715, 650], [2527, 547]], IMG_W = 3100;
+function look(x, y) {
+  const r = eyesBox.getBoundingClientRect(); if (!r.width) return; const k = r.width / IMG_W;
+  pups.forEach((p, i) => {
+    const cx = r.left + CEN[i][0] * k, cy = r.top + CEN[i][1] * k, dx = x - cx, dy = y - cy, a = Math.atan2(dy, dx), d = Math.min(1, Math.hypot(dx, dy) / 350);
+    p.style.transform = `translate(${Math.cos(a) * d * 38 * k}px,${Math.sin(a) * d * 24 * k}px)`; /* 38 и 24 исходных пикселя: максимальный сдвиг */
+  });
+}
 addEventListener('mousemove', e => look(e.clientX, e.clientY));
 addEventListener('touchmove', e => look(e.touches[0].clientX, e.touches[0].clientY), { passive: true });
-const eyeHit = () => { sfx('heart'); glitchNow(); secret('eye', 'ты посмотрел ей в глаза') };
-$('#strip').onclick = eyeHit; $('.watcher').onclick = eyeHit;
+eyesBox.onclick = () => { sfx('heart'); glitchNow(); secret('eye', 'ты посмотрел ей в глаза') };
 
 /* ---------- досье субъектов: клик = мёртвая версия, клик по Монике = все ---------- */
 const CAST = [

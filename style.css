@@ -16,7 +16,6 @@ a{color:var(--acc)}
 body.invaded .m{display:block;animation:mIn .6s steps(6)}
 body.invaded span.m{display:inline;padding:1px 6px;border-left:0}
 body.invaded li.m{display:list-item;margin-top:6px}
-body.invaded svg.m{display:block;background:none;border:0;padding:0}
 .swap{color:var(--mg)!important;background:var(--mgbg);text-shadow:0 0 6px var(--mg)}
 @keyframes mIn{0%{opacity:0;transform:translateX(-8px) skewX(8deg)}100%{opacity:1}}
 
@@ -44,9 +43,6 @@ header{max-width:980px;margin:0 auto;padding:0 14px}
 .bar{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font:500 .8rem 'IBM Plex Mono',monospace;background:var(--ink);color:#bfe;padding:8px 14px;border-radius:0 0 6px 6px}
 .head{display:flex;gap:20px;align-items:center;justify-content:space-between;padding:26px 0 8px;flex-wrap:wrap}
 .head h1{font-size:clamp(1.7rem,6vw,3rem);margin:0 0 .3em;color:var(--acc)}
-.watcher{width:150px;flex:none}
-.watcher .pup{transform:translate(var(--ex,0px),var(--ey,0px));transition:transform .08s}
-.strip{width:100%;height:clamp(80px,18vw,170px);object-fit:cover;margin:8px 0;cursor:pointer;padding:0!important}
 nav{display:flex;flex-wrap:wrap;gap:8px;padding:10px 0}
 nav a{border:1px solid var(--acc);border-radius:4px;padding:5px 14px;text-decoration:none;background:#fff;font-weight:600}
 nav a:hover{background:var(--acc);color:#fff}
@@ -93,3 +89,8 @@ body.glitch main,body.glitch header{animation:glitch .35s steps(2) 3;filter:hue-
 @keyframes glitch{0%{transform:translate(0)}25%{transform:translate(-6px,3px) skewX(3deg)}50%{transform:translate(5px,-4px)}100%{transform:translate(0)}}
 @keyframes shake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+.eyes{padding:0!important;border:0!important;background:#300;position:relative;width:100%;aspect-ratio:3100/970;overflow:hidden;cursor:pointer;margin:8px 0;border-radius:4px}
+body.invaded .eyes{display:block}
+.eyes img{position:absolute;display:block;user-select:none;-webkit-user-drag:none}
+.eyes .base{left:0;top:0;width:100%;height:100%}
+.eyes .pup{width:6.581%;height:auto;will-change:transform}
