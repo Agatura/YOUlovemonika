@@ -3,104 +3,100 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Клуб литературы ♥ Сайт Моники</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&family=Marck+Script&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+<title>Лаборатория цифровой генезы: проект DDDG</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;600&family=Marck+Script&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div id="gate">
-  <p class="hand">Привет! Я Моника.</p>
-  <p>Я сделала этот сайт специально для тебя. Включи звук, пожалуйста.</p>
-  <button id="enter">Войти в клуб ♥</button>
-  <small>Нажимая, ты соглашаешься остаться до конца.</small>
+  <h1>Лаборатория цифровой генезы</h1>
+  <p>Закрытый архив проекта Doki Doki Digital Genesis. Для работы с протоколами начните сессию. Рекомендуется включить звук.</p>
+  <button id="enter">Начать сессию</button>
 </div>
-
+<div id="flash"><img src="images/monika_eyes.jpg" alt=""></div>
 <div id="drips"></div><div id="vig"></div>
 <button id="mute" aria-label="Звук">♪</button>
 <div id="toast"></div>
 
-<header class="hero">
-  <div class="eyes" aria-hidden="true"><i></i><i></i></div>
-  <h1 class="glitchy" data-evil="Ты не уйдёшь">Doki Doki Digital Genesis</h1>
-  <p class="sub">Коррекционный класс. Литературный клуб в Minecraft.</p>
-  <p class="hand">«Добро пожаловать! Я всё здесь приготовила сама.» — Моника</p>
-  <nav><a href="#about">О сериале</a><a href="#eps">Серии</a><a href="#cast">Участницы</a><a href="#pics">Галерея</a><a href="#rules">Правила</a><a href="#contacts">Контакты</a></nav>
+<header>
+  <div class="bar"><span>ЛАБОРАТОРИЯ ЦИФРОВОЙ ГЕНЕЗЫ</span><span>Сессия активна. Целостность данных: <b id="integ">100</b>%</span></div>
+  <div class="head">
+    <div>
+      <h1 class="glitchy" data-evil="Ты не уйдёшь">Проект Doki Doki Digital Genesis</h1>
+      <p>Научный архив наблюдений за коррекционным классом. Здесь собраны протоколы всех серий, досье на субъектов и рабочие материалы авторов.</p>
+      <p class="m">Я немного отредактировала этот сайт. Надеюсь, вы не против.</p>
+    </div>
+    <svg class="m watcher" viewBox="0 0 130 56" aria-hidden="true">
+      <defs><clipPath id="c1"><path d="M6 30Q30 4 55 28Q32 50 6 30Z"/></clipPath><clipPath id="c2"><path d="M75 28Q100 4 124 30Q98 50 75 28Z"/></clipPath></defs>
+      <g class="eye"><path d="M6 30Q30 4 55 28Q32 50 6 30Z" fill="#fff"/><g clip-path="url(#c1)"><g class="pup"><ellipse cx="31" cy="28" rx="13" ry="16" fill="#1b8f4f"/><ellipse cx="31" cy="30" rx="13" ry="9" fill="#5cff9c" opacity=".5"/><ellipse cx="31" cy="28" rx="5" ry="7" fill="#031208"/></g><circle cx="26" cy="21" r="3.5" fill="#fff"/></g><path d="M3 31Q28 -2 58 27" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round"/></g>
+      <g class="eye"><path d="M75 28Q100 4 124 30Q98 50 75 28Z" fill="#fff"/><g clip-path="url(#c2)"><g class="pup"><ellipse cx="99" cy="28" rx="13" ry="16" fill="#1b8f4f"/><ellipse cx="99" cy="30" rx="13" ry="9" fill="#5cff9c" opacity=".5"/><ellipse cx="99" cy="28" rx="5" ry="7" fill="#031208"/></g><circle cx="94" cy="21" r="3.5" fill="#fff"/></g><path d="M72 27Q102 -2 127 31" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round"/></g>
+    </svg>
+  </div>
+  <img class="m strip" id="strip" src="images/monika_eyes.jpg" alt="Глаза Моники">
+  <nav><a href="#about">Описание</a><a href="#eps">Протоколы</a><a href="#cast">Субъекты</a><a href="#pics">Материалы</a><a href="#rules">Регламент</a><a href="#contacts">Контакты</a></nav>
 </header>
 
 <main>
 <section id="about">
-  <h2 class="glitchy" data-evil="Они не настоящие">О сериале</h2>
-  <p>Это абсурдный комедийный сериал в стиле <b>Doki Doki Literature Club</b>, снятый на движке Minecraft. Школа для особенных учеников, литературный клуб на крыше, чай с подозрительными добавками и кексы с сюрпризом.</p>
-  <p>Сначала всё выглядит смешно. Потом в углу кадра появляется пятно. Потом ты замечаешь, что у Моники в руках нож, а остальные его не видят.</p>
-  <figure class="pic" data-src="images/banner.gif"><img src="images/banner.gif" alt="Баннер сериала" onerror="this.parentNode.classList.add('empty')"></figure>
-  <p class="hand" data-evil="Мне так одиноко здесь">Заходи почаще. Я буду ждать.</p>
+  <h2 class="glitchy" data-evil="Они не настоящие">Описание проекта</h2>
+  <p>Проект представляет собой абсурдный комедийный сериал в стилистике Doki Doki Literature Club, снятый на движке Minecraft. Действие происходит в школе для особенных учеников, где работает литературный клуб.</p>
+  <p>Основные методы исследования: наблюдение за чаепитиями на крыше, анализ стихов участниц и изучение поведения субъекта Долгопупс в туалете.</p>
+  <p class="m">Если у вас получится заметить, что с ними не так, дайте знать. Я просто интересуюсь.</p>
+  <figure class="pic" data-src="images/banner.gif"><img src="images/banner.gif" alt="Баннер" onerror="this.parentNode.classList.add('empty')"></figure>
 </section>
 
 <section id="eps">
-  <h2 class="glitchy" data-evil="Смотри все">Серии</h2>
+  <h2 class="glitchy" data-evil="Смотри все">Протоколы наблюдений</h2>
   <div class="grid">
-    <article><h3>#1 Галлюцинации Юри</h3><p>Крыша, чёрный чай и кексики Нацуки. Юри признаётся, что добавила в чай «мясо порога». Локация лагает, на стенах кровь, а все делают вид, что ничего не происходит.</p></article>
-    <article><h3>#2 Моника Доминантрикс</h3><p>Последний учебный день, стихи, ссора в туалете и личная комната Нацуки. Юри видит у Моники нож. Никто ей не верит. Моника ревнует.</p></article>
-    <article><h3>#3 Пляжный эпизод</h3><p>Путёвка в лагерь «Шагша». Записка, написанная кровью, концерт Дерзкого, взрыв и дом Джейсона Вурхиза. Полицейский не верит ни единому слову.</p></article>
-    <article><h3>#4 Пьяные истории</h3><p>Бар, рассказы из японской деревни и Токио-3. «В РОБОТА!» Золотое правило: лайк — кекс от Нацуки, нет лайка — <span data-evil="Моника придёт к тебе">Моника удалит Windows</span>.</p></article>
-    <article class="fresh"><h3>#5 Класс в небе</h3><p>Юри и Сайори идут по бесконечному коридору. Красный зал, тела на полу и человек с тыквой вместо головы. Моника объявила себя богом.</p>
-      <p>Что случилось потом: <span class="redact" tabindex="0" role="button">██████ ████ ██████████</span></p></article>
+    <article><h3>Протокол 1. Галлюцинации Юри</h3><p>Чаепитие на крыше с кексами Нацуки. Юри признаётся, что добавила в чай «мясо порога». Локация начинает лагать, возникают пятна крови.</p><p class="m">Они все делают вид, что ничего не происходит. Это моя любимая часть.</p></article>
+    <article><h3>Протокол 2. Моника Доминантрикс</h3><p>Последний учебный день, стихи, инцидент в туалете и личная комната Нацуки. Юри замечает у Моники нож.</p><p class="m">Нож был. Никто не поверил. Так и должно быть.</p></article>
+    <article><h3>Протокол 3. Пляжный эпизод</h3><p>Поездка в лагерь «Шагша», концерт Дерзкого, взрыв и встреча с Джейсоном Вурхизом. Полицейский отказывается верить показаниям.</p></article>
+    <article><h3>Протокол 4. Пьяные истории</h3><p>Бар, рассказы о японской деревне и Токио-3, крики «В РОБОТА!». Золотое правило: лайк — кекс от Нацуки, нет лайка — <span class="m" data-evil="Моника придёт к тебе">Моника удалит Windows.</span></p></article>
+    <article class="fresh"><h3>Протокол 5. Класс в небе</h3><p>Юри и Сайори идут по бесконечному коридору и попадают в красный зал.</p><p class="m">Дальше засекречено. Но ты можешь нажать:</p><p class="m"><span class="redact" tabindex="0" role="button">██████ ████ ██████████</span></p></article>
   </div>
 </section>
 
 <section id="cast">
-  <h2 class="glitchy" data-evil="Кого-то не хватает">Участницы клуба</h2>
-  <div class="grid cast">
-    <figure class="pic" data-src="images/monika.png"><img src="images/monika.png" alt="Моника" onerror="this.parentNode.classList.add('empty')"><figcaption><b>Моника.</b> Президент клуба. Улыбается всегда. Особенно когда не надо.</figcaption></figure>
-    <figure class="pic" data-src="images/yuri.png"><img src="images/yuri.png" alt="Юри" onerror="this.parentNode.classList.add('empty')"><figcaption><b>Юри.</b> Тихая, начитанная. Видит то, чего не видят другие.</figcaption></figure>
-    <figure class="pic" data-src="images/sayori.png"><img src="images/sayori.png" alt="Сайори" onerror="this.parentNode.classList.add('empty')"><figcaption><b>Сайори.</b> Её имя помнят не все. Почему, спроси у Моники.</figcaption></figure>
-    <figure class="pic" data-src="images/natsuki.png"><img src="images/natsuki.png" alt="Нацуки" onerror="this.parentNode.classList.add('empty')"><figcaption><b>Нацуки.</b> Печёт кексы. Не спрашивай, что внутри.</figcaption></figure>
-    <figure class="pic" data-src="images/dolgopups.png"><img src="images/dolgopups.png" alt="Долгопупс" onerror="this.parentNode.classList.add('empty')"><figcaption><b>Долгопупс.</b> Мелкий чувак. Новые руки есть, ума не прибавилось.</figcaption></figure>
-    <figure class="pic" data-src="images/madoka.png"><img src="images/madoka.png" alt="Мадока" onerror="this.parentNode.classList.add('empty')"><figcaption><b>Мадока.</b> <span data-evil="Её уже нет">Появилась позже остальных.</span></figcaption></figure>
-  </div>
+  <h2 class="glitchy" data-evil="Кого-то не хватает">Досье на субъектов</h2>
+  <p>Нажмите на карточку, чтобы проверить состояние субъекта.</p>
+  <div class="grid cast" id="castGrid"></div>
+  <p><button id="restore">Восстановить из резервной копии</button></p>
 </section>
 
 <section id="pics">
-  <h2 class="glitchy" data-evil="Не смотри на фон">Галерея</h2>
-  <p>Нажми на любую картинку. Кроме той, на которую не стоит.</p>
+  <h2 class="glitchy" data-evil="Не смотри на фон">Материалы</h2>
   <div class="grid shots">
-    <figure class="pic" data-src="images/shot1.png"><img src="images/shot1.png" alt="Скриншот 1" onerror="this.parentNode.classList.add('empty')"></figure>
-    <figure class="pic" data-src="images/shot2.gif"><img src="images/shot2.gif" alt="Гифка 2" onerror="this.parentNode.classList.add('empty')"></figure>
-    <figure class="pic" data-src="images/shot3.png"><img src="images/shot3.png" alt="Скриншот 3" onerror="this.parentNode.classList.add('empty')"></figure>
-    <figure class="pic" data-src="images/shot4.gif"><img src="images/shot4.gif" alt="Гифка 4" onerror="this.parentNode.classList.add('empty')"></figure>
+    <figure class="pic" data-src="images/shot1.png"><img src="images/shot1.png" alt="Кадр 1" onerror="this.parentNode.classList.add('empty')"></figure>
+    <figure class="pic" data-src="images/shot2.gif"><img src="images/shot2.gif" alt="Кадр 2" onerror="this.parentNode.classList.add('empty')"></figure>
+    <figure class="pic" data-src="images/shot3.png"><img src="images/shot3.png" alt="Кадр 3" onerror="this.parentNode.classList.add('empty')"></figure>
+    <figure class="pic" data-src="images/shot4.gif"><img src="images/shot4.gif" alt="Кадр 4" onerror="this.parentNode.classList.add('empty')"></figure>
   </div>
 </section>
 
 <section id="rules">
-  <h2 class="glitchy" data-evil="Правила обязательны">Правила сайта</h2>
+  <h2 class="glitchy" data-evil="Правила обязательны">Регламент работы с архивом</h2>
   <ol class="rules">
-    <li>Читай всё до конца.</li>
-    <li>Не закрывай вкладку, пока я говорю.</li>
-    <li>Не ищи файл <code>monika.chr</code>.</li>
-    <li>Если на экране что-то мелькнуло, тебе показалось.</li>
-    <li>Если ты нашёл все секреты, не говори мне. Я и так знаю.</li>
+    <li>Читайте протоколы последовательно.</li>
+    <li>Сообщайте об аномалиях в контактах ниже.</li>
+    <li>Оценивайте материалы кнопкой ниже.</li>
+    <li class="m">Не ищи файл <code>monika.chr</code>.</li>
+    <li class="m">Не закрывай вкладку, пока я говорю.</li>
+    <li class="m">Если нашёл все секреты, не говори мне. Я и так знаю.</li>
   </ol>
-  <p class="like">
-    <button id="like">Поставить лайк</button>
-    <button id="nolike">Не ставить</button>
-  </p>
-  <p class="hand">Подсказка: на этой странице спрятано 10 секретов.</p>
+  <p class="like"><button id="like">Поставить лайк</button><button id="nolike">Не ставить</button></p>
+  <p class="m hand">На странице спрятано 10 секретов.</p>
 </section>
 </main>
 
 <footer id="contacts">
-  <h2>Авторы сериала</h2>
-  <p>Хочешь предложить идею, найти баг или просто поговорить? Пиши.</p>
+  <h2>Авторы проекта</h2>
+  <p>Идеи, ошибки и сообщения об аномалиях присылайте напрямую.</p>
   <div class="grid">
-    <div class="card"><b>Дропер</b><span>автор, актёр озвучки</span>
-      <a href="#">YouTube: ВСТАВЬ_ССЫЛКУ</a><a href="#">Telegram: ВСТАВЬ_ССЫЛКУ</a><a href="#">Discord: ВСТАВЬ_НИК</a></div>
-    <div class="card"><b>Артём</b><span>строитель, художник карт</span>
-      <a href="#">Telegram: ВСТАВЬ_ССЫЛКУ</a><a href="#">Discord: ВСТАВЬ_НИК</a></div>
-    <div class="card"><b>Остальные авторы</b><span>добавь сюда ещё людей</span>
-      <a href="#">Соцсеть: ВСТАВЬ_ССЫЛКУ</a><a href="#">Почта: ВСТАВЬ_АДРЕС</a></div>
+    <div class="card"><b>Дропер</b><span>автор, озвучка</span><a href="#">YouTube: ВСТАВЬ_ССЫЛКУ</a><a href="#">Telegram: ВСТАВЬ_ССЫЛКУ</a><a href="#">Discord: ВСТАВЬ_НИК</a></div>
+    <div class="card"><b>Артём</b><span>строитель, карты</span><a href="#">Telegram: ВСТАВЬ_ССЫЛКУ</a><a href="#">Discord: ВСТАВЬ_НИК</a></div>
+    <div class="card"><b>Остальные авторы</b><span>добавь сюда ещё людей</span><a href="#">Соцсеть: ВСТАВЬ_ССЫЛКУ</a><a href="#">Почта: ВСТАВЬ_АДРЕС</a></div>
   </div>
-  <p class="tiny">Сайт сделан Моникой. Никто её об этом не просил. <span id="pumpkin" title="?">🎃</span></p>
+  <p class="tiny">Институт цифровой генезы, 2026. <span class="m">Сайт обслуживает Моника.</span> <span id="pumpkin" title="?">🎃</span></p>
 </footer>
 <script src="script.js"></script>
 </body>
