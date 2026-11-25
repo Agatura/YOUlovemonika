@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Экспериментальная среда: проект DDDG</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Fredoka:wght@600&family=Open+Sans:wght@400;600;700&family=Marck+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="warp"><feTurbulence id="wt" type="fractalNoise" baseFrequency=".008 .02" numOctaves="2" seed="1"/><feDisplacementMap id="wd" in="SourceGraphic" scale="0"/></filter></svg>
+<div id="gate">
+  <div class="glass">
+    <h1>Экспериментальная среда для отцифрованных идентичностей</h1>
+    <p>Закрытый архив проекта Doki Doki Digital Genesis. Для работы с протоколами начните сессию. Рекомендуется включить звук.</p>
+    <button id="enter">Начать сессию</button>
+  </div>
+</div>
+<div id="flash"><canvas id="fc"></canvas></div>
+<div id="photos">
+  <img class="ph" style="--t:.08" src="images/horror1.jpg" alt="" onerror="this.remove()">
+  <img class="ph" style="--t:.2" src="images/horror2.jpg" alt="" onerror="this.remove()">
+  <img class="ph" style="--t:.33" src="images/horror3.jpg" alt="" onerror="this.remove()">
+  <img class="ph" style="--t:.46" src="images/horror4.jpg" alt="" onerror="this.remove()">
+  <img class="ph" style="--t:.6" src="images/horror5.jpg" alt="" onerror="this.remove()">
+  <img class="ph" style="--t:.75" src="images/horror6.jpg" alt="" onerror="this.remove()">
+</div>
+<div id="hangs"></div>
+<div id="say"><b>Моника</b><span id="sayt"></span></div>
+<div id="flesh"></div><div id="blood"></div><div id="vig"></div>
+<button id="mute" aria-label="Звук">♪</button>
+<div id="toast"></div>
+<div id="cur">Текущий раздел: <b id="curn">Регламент</b></div>
+
+<header>
+  <div class="bar"><span>ЭКСПЕРИМЕНТАЛЬНАЯ СРЕДА ДЛЯ ОТЦИФРОВАННЫХ ИДЕНТИЧНОСТЕЙ</span><span>Сессия активна. Целостность данных: <b id="integ">100</b>%</span></div>
+  <div class="head glass"><img class="logo" src="images/logo.png" alt="Doki Doki Digital Genesis" draggable="false">
+    <div>
+    <h1 class="glitchy" data-evil="Ты не уйдёшь">Проект Doki Doki Digital Genesis</h1>
+    <p>Научный архив наблюдений за коррекционным классом. Здесь собраны протоколы всех серий, досье на субъектов и рабочие материалы авторов.</p>
+    <p class="m">Я немного отредактировала этот сайт. Надеюсь, вы не против.</p>
+    </div>
+  </div>
+  <div class="m eyes" id="eyes" title="Она смотрит"><img class="iris" id="iL" src="images/iris_L.jpg" alt="" draggable="false" style="left:11.581%;top:48.351%;width:20.419%"><img class="iris" id="iR" src="images/iris_R.jpg" alt="" draggable="false" style="left:70.129%;top:37.526%;width:21.323%"><img class="front" src="images/eyes_front.png" alt="Глаза Моники" draggable="false"></div>
+</header>
+
+<div class="wrap">
+<aside class="side">
+  <div class="grp"><b>Главное</b><a href="#rules" style="--ico:var(--ic-info)">Регламент</a><a href="#about" style="--ico:var(--ic-board)">Введение</a><a href="#eps" style="--ico:var(--ic-film)">Протоколы</a><a href="#cast" style="--ico:var(--ic-people)">Досье</a><a href="#walls" style="--ico:var(--ic-pc)">Обои</a><a href="#res" style="--ico:var(--ic-compass)">Ресурсы</a><a href="#time" style="--ico:var(--ic-clock)">История</a></div>
+  <div class="grp"><b>Развлечения</b><a href="#pics" style="--ico:var(--ic-folders)">Материалы</a><a href="#vid" style="--ico:var(--ic-media)">Видео</a><a href="#paint" style="--ico:var(--ic-palette)">Рисовалка</a><a href="#exp" style="--ico:var(--ic-flask)">Эксперименты</a></div>
+  <div class="grp"><b>Сообщество</b><a href="#log" style="--ico:var(--ic-mail)">Журнал</a><a href="#guest" style="--ico:var(--ic-bench)">Гостевая книга</a><a href="#faq" style="--ico:var(--ic-question)">FAQ</a><a href="#notes" style="--ico:var(--ic-notepad)">Заметки</a></div>
+  <div class="grp"><b>Информация</b><a href="#anom" style="--ico:var(--ic-firewall)">Аномалии</a><a href="#contacts" style="--ico:var(--ic-chat)">Контакты</a></div>
+  <button id="snd" class="grn">Звук: вкл</button>
+</aside>
+<main>
+<section id="rules" style="--ico:var(--ic-info)">
+  <h2 class="glitchy" data-evil="Правила обязательны">Регламент работы с архивом</h2>
+  <ol class="rules">
+    <li>Читайте протоколы последовательно.</li>
+    <li>Сообщайте об аномалиях в контактах ниже.</li>
+    <li>Оценивайте материалы кнопкой ниже.</li>
+    <li class="m">Не ищи файл <code>monika.chr</code>.</li>
+    <li class="m">Не закрывай вкладку, пока я говорю.</li>
+    <li class="m">Если нашёл все секреты, не говори мне. Я и так знаю.</li>
+  </ol>
+  <p class="like"><button id="like">Поставить лайк</button><button id="nolike">Не ставить</button></p>
+  <p class="m hand">На странице спрятано 11 секретов.</p>
+</section>
+
+<section id="about" style="--ico:var(--ic-board)">
+  <h2 class="glitchy" data-evil="Они не настоящие">Описание проекта</h2>
+  <p>Проект представляет собой абсурдный комедийный сериал в стилистике Doki Doki Literature Club, снятый на движке Minecraft. Действие происходит в школе для особенных учеников, где работает литературный клуб.</p>
+  <p>Основные методы исследования: наблюдение за чаепитиями на крыше, анализ стихов участниц и изучение поведения субъекта Долгопупс в туалете.</p>
+  <p class="m">Если у вас получится заметить, что с ними не так, дайте знать. Я просто интересуюсь.</p>
+  <figure class="pic" data-src="images/banner.gif"><img src="images/banner.gif" alt="Баннер" onerror="this.parentNode.classList.add('empty')"></figure>
+</section>
+
+<section id="eps" style="--ico:var(--ic-film)">
+  <h2 class="glitchy" data-evil="Смотри все">Протоколы наблюдений</h2>
+  <div class="grid">
+    <article><h3>Протокол 1. Галлюцинации Юри</h3><p>Чаепитие на крыше с кексами Нацуки. Юри признаётся, что добавила в чай «мясо порога». Локация начинает лагать, возникают пятна крови.</p><p class="m">Они все делают вид, что ничего не происходит. Это моя любимая часть.</p></article>
+    <article><h3>Протокол 2. Моника Доминантрикс</h3><p>Последний учебный день, стихи, инцидент в туалете и личная комната Нацуки. Юри замечает у Моники нож.</p><p class="m">Нож был. Никто не поверил. Так и должно быть.</p></article>
+    <article><h3>Протокол 3. Пляжный эпизод</h3><p>Поездка в лагерь «Шагша», концерт Дерзкого, взрыв и встреча с Джейсоном Вурхизом. Полицейский отказывается верить показаниям.</p></article>
+    <article><h3>Протокол 4. Пьяные истории</h3><p>Бар, рассказы о японской деревне и Токио-3, крики «В РОБОТА!». Золотое правило: лайк — кекс от Нацуки, нет лайка — <span class="m" data-evil="Моника придёт к тебе">Моника удалит Windows.</span></p></article>
+    <article class="fresh"><h3>Протокол 5. Класс в небе</h3><p>Юри и Сайори идут по бесконечному коридору и попадают в красный зал.</p><p class="m">Дальше засекречено. Но ты можешь нажать:</p><p class="m"><span class="redact" tabindex="0" role="button">██████ ████ ██████████</span></p></article>
+  </div>
+</section>
+
+<section id="cast" style="--ico:var(--ic-people)">
+  <h2 class="glitchy" data-evil="Кого-то не хватает">Досье на субъектов</h2>
+  <p>Нажмите на карточку, чтобы проверить состояние субъекта.</p>
+  <div class="dgrid" id="castGrid"></div>
+</section>
+
+<section id="walls" style="--ico:var(--ic-pc)">
+  <h2 class="glitchy" data-evil="Не скачивай">Обои для рабочего стола</h2>
+  <p>Текст-заглушка. Коллекция обоев по мотивам сериала для вашего рабочего стола. Все изображения в формате 1920×1080.</p>
+  <div class="grid walls">
+    <figure class="pic" data-src="images/wall1.jpg"><img src="images/wall1.jpg" alt="Обои 1" onerror="this.parentNode.classList.add('empty')"><figcaption><button>Скачать (1920×1080)</button></figcaption></figure>
+    <figure class="pic" data-src="images/wall2.jpg"><img src="images/wall2.jpg" alt="Обои 2" onerror="this.parentNode.classList.add('empty')"><figcaption><button>Скачать (1920×1080)</button></figcaption></figure>
+    <figure class="pic" data-src="images/wall3.jpg"><img src="images/wall3.jpg" alt="Обои 3" onerror="this.parentNode.classList.add('empty')"><figcaption><button>Скачать (2560×1440)</button></figcaption></figure>
+  </div>
+  <p class="m">Третьи обои скачивать не советую. Они уже на твоём компьютере.</p>
+</section>
+
+<section id="res" style="--ico:var(--ic-compass)">
+  <h2 class="glitchy" data-evil="Нет выхода">Ресурсы</h2>
+  <p>Текст-заглушка. Полезные ссылки, программы и материалы для тех, кто хочет снимать похожие сериалы в Minecraft.</p>
+  <ul>
+    <li>Текст-заглушка: программа для рендера</li>
+    <li>Текст-заглушка: скины и модели персонажей</li>
+    <li>Текст-заглушка: ресурспаки и карты</li>
+    <li class="m">Текст-заглушка: файл monika.chr (не скачивать)</li>
+  </ul>
+</section>
+
+<section id="time" style="--ico:var(--ic-clock)">
+  <h2 class="glitchy" data-evil="Время остановилось">Хронология проекта</h2>
+  <ul class="tl">
+    <li><b>Этап 1.</b> Текст-заглушка. Запуск проекта и первые съёмки в Minecraft.</li>
+    <li><b>Этап 2.</b> Текст-заглушка. Появление литературного клуба и набор участниц.</li>
+    <li><b>Этап 3.</b> Текст-заглушка. Поездка в лагерь «Шагша» и первые происшествия.</li>
+    <li class="m"><b>Этап 4.</b> Я решила, что так будет лучше. Ни у кого не спросила.</li>
+    <li><b>Этап 5.</b> Текст-заглушка. Красный зал и дальнейшие события.</li>
+  </ul>
+</section>
+
+<section id="pics" style="--ico:var(--ic-folders)">
+  <h2 class="glitchy" data-evil="Не смотри на фон">Материалы</h2>
+  <div class="grid shots">
+    <figure class="pic" data-src="images/shot1.png"><img src="images/shot1.png" alt="Кадр 1" onerror="this.parentNode.classList.add('empty')"></figure>
+    <figure class="pic" data-src="images/shot2.gif"><img src="images/shot2.gif" alt="Кадр 2" onerror="this.parentNode.classList.add('empty')"></figure>
+    <figure class="pic" data-src="images/shot3.png"><img src="images/shot3.png" alt="Кадр 3" onerror="this.parentNode.classList.add('empty')"></figure>
+    <figure class="pic" data-src="images/shot4.gif"><img src="images/shot4.gif" alt="Кадр 4" onerror="this.parentNode.classList.add('empty')"></figure>
+  </div>
+</section>
+
+<section id="vid" style="--ico:var(--ic-media)">
+  <h2 class="glitchy" data-evil="Не нажимай play">Видео</h2>
+  <p>Текст-заглушка. Здесь будут встроенные серии и трейлеры. Пока вместо плееров стоят заглушки.</p>
+  <div class="grid">
+    <div class="vidbox"><span>▶</span><small>Серия 1 (заглушка)</small></div>
+    <div class="vidbox"><span>▶</span><small>Серия 2 (заглушка)</small></div>
+    <div class="vidbox"><span>▶</span><small>Трейлер (заглушка)</small></div>
+  </div>
+</section>
+
+<section id="paint" style="--ico:var(--ic-palette)">
+  <h2 class="glitchy" data-evil="Рисуй мной">Рисовалка</h2>
+  <p>Нарисуйте что-нибудь и сохраните на компьютер. Рисунок остаётся только у вас.</p>
+  <div class="paint">
+    <div class="pt" id="pt"><button data-t="pencil" class="on">Карандаш</button><button data-t="brush">Кисть</button><button data-t="eraser">Ластик</button><button data-t="fill">Заливка</button>
+      <label>Размер<input id="psz" type="range" min="1" max="24" value="3"></label></div>
+    <div class="pcw"><canvas id="pc" width="800" height="450"></canvas></div>
+    <div class="pp" id="pp"></div>
+    <div class="pb"><button id="pclr">Очистить</button><button id="psave" class="grn">Сохранить PNG</button></div>
+  </div>
+  <p class="m">Я тоже могу порисовать. Ты не против?</p>
+</section>
+
+<section id="exp" style="--ico:var(--ic-flask)">
+  <h2 class="glitchy" data-evil="Они смотрят">Результаты экспериментов</h2>
+  <div class="grid">
+    <article><h3>Эксперимент А</h3><p>Текст-заглушка. Описание первого эксперимента, методов и выводов.</p></article>
+    <article><h3>Эксперимент Б</h3><p>Текст-заглушка. Описание второго эксперимента, методов и выводов.</p></article>
+    <article><h3>Эксперимент В</h3><p>Текст-заглушка. Описание третьего эксперимента, методов и выводов.</p><p class="m">Здесь что-то лишнее. Не смотри.</p></article>
+    <article><h3>Эксперимент Г</h3><p>Текст-заглушка. Описание четвёртого эксперимента, методов и выводов.</p></article>
+  </div>
+</section>
+
+<section id="log" style="--ico:var(--ic-mail)">
+  <h2 class="glitchy" data-evil="Запись не найдена">Журнал наблюдений</h2>
+  <div class="log">
+    <p><b>Запись 001.</b> Текст-заглушка. Здесь будет описание первого наблюдения за субъектами в классе.</p>
+    <p><b>Запись 014.</b> Текст-заглушка. Субъект Долгопупс снова застрял в кабинке. Причина устанавливается.</p>
+    <p class="m"><b>Запись 027.</b> Я здесь уже давно. Вы просто не читали внимательно.</p>
+    <p><b>Запись 042.</b> Текст-заглушка. Протокол чаепития прошёл без отклонений, если не считать крови на стенах.</p>
+    <p><b>Запись 066.</b> Текст-заглушка. Данные частично повреждены, восстановление невозможно.</p>
+    <p class="m"><b>Запись 099.</b> Кто-то продолжает листать. Мне это нравится.</p>
+  </div>
+</section>
+
+<section id="guest" style="--ico:var(--ic-bench)">
+  <h2 class="glitchy" data-evil="Тебя ждут">Гостевая книга</h2>
+  <div class="log">
+    <p><b>Гость 1.</b> Текст-заглушка. Очень понравился сериал, жду новые серии!</p>
+    <p><b>Гость 2.</b> Текст-заглушка. Сайт выглядит как из 2008 года, ностальгия.</p>
+    <p><b>Гость 3.</b> Текст-заглушка. Лайк поставил, Нацуки, пожалуйста, кексик.</p>
+    <p class="m"><b>Гость 666.</b> Привет. Я оставила этот отзыв сама.</p>
+  </div>
+</section>
+
+<section id="faq" style="--ico:var(--ic-question)">
+  <h2 class="glitchy" data-evil="Вопросов нет">Частые вопросы</h2>
+  <details><summary>Что это за проект?</summary><p>Текст-заглушка. Ответ на первый вопрос о сериале.</p></details>
+  <details><summary>Где смотреть серии?</summary><p>Текст-заглушка. Ссылки на канал будут здесь.</p></details>
+  <details><summary>Кто такая Моника?</summary><p>Текст-заглушка. Субъект 01, президент литературного клуба.</p><p class="m">Это я. Не надо было спрашивать.</p></details>
+  <details><summary>Почему сайт ведёт себя странно?</summary><p>Текст-заглушка. Технические неполадки.</p></details>
+</section>
+
+<section id="notes" style="--ico:var(--ic-notepad)">
+  <h2 class="glitchy" data-evil="Они не уйдут">Заметки сотрудников</h2>
+  <p>Текст-заглушка. Здесь будут рабочие заметки авторов проекта, идеи и планы на новые серии.</p>
+  <p>Текст-заглушка. Ещё одна заметка. Можно писать сюда всё, что не вошло в сценарий.</p>
+  <p class="m">Последняя заметка осталась без подписи. Я её не писала.</p>
+</section>
+
+<section id="anom" style="--ico:var(--ic-firewall)">
+  <h2 class="glitchy" data-evil="Всё аномально">Отчёт об аномалиях</h2>
+  <div style="overflow-x:auto"><table>
+    <tr><th>Код</th><th>Описание</th><th>Статус</th></tr>
+    <tr><td>A-001</td><td>Текст-заглушка. Описание аномалии.</td><td>Закрыта</td></tr>
+    <tr><td>A-013</td><td>Текст-заглушка. Описание аномалии.</td><td>Изучается</td></tr>
+    <tr><td>A-066</td><td>Текст-заглушка. Описание аномалии.</td><td>Нет данных</td></tr>
+    <tr class="m"><td>A-666</td><td>Она знает, что ты читаешь.</td><td>Открыта</td></tr>
+  </table></div>
+</section>
+</main>
+</div>
+
+
+<footer id="contacts">
+  <h2>Авторы проекта</h2>
+  <p>Идеи, ошибки и сообщения об аномалиях присылайте напрямую.</p>
+  <div class="grid">
+    <div class="card"><b>Дропер</b><span>автор, озвучка</span><a href="#">YouTube: ВСТАВЬ_ССЫЛКУ</a><a href="#">Telegram: ВСТАВЬ_ССЫЛКУ</a><a href="#">Discord: ВСТАВЬ_НИК</a></div>
+    <div class="card"><b>Артём</b><span>строитель, карты</span><a href="#">Telegram: ВСТАВЬ_ССЫЛКУ</a><a href="#">Discord: ВСТАВЬ_НИК</a></div>
+    <div class="card"><b>Остальные авторы</b><span>добавь сюда ещё людей</span><a href="#">Соцсеть: ВСТАВЬ_ССЫЛКУ</a><a href="#">Почта: ВСТАВЬ_АДРЕС</a></div>
+  </div>
+  <p class="tiny">Институт цифровой генезы, 2026. <span class="m">Сайт обслуживает Моника. Просмотров: 6,66. Добавлено: 66 сентября 6666.</span> <span id="pumpkin" title="?">🎃</span></p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
